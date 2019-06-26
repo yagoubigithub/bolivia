@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Navbar from './components/firstPage/Navbar';
 
 function App() {
   return (
     <div>
-    <h1>Bolivia</h1>
+   <Navbar />
    
     </div>
   );

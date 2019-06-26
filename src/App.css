@@ -1,33 +1,45 @@
-.App {
-  text-align: center;
+:root{
+  --primary : #b71c1c;
+  --primary-light: #f05545;
+  --primary-dark : #7f0000;
+  --secondary : #37474f;
+  --secondary-light :#62727b ;
+  --secondary-dark :#102027 ;
+  --floor : #F2F2F2;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  margin:0;
+  background: var(--floor);
+}
+.navbar{
+  background-color: var(--primary);
+  padding: 15px;
+}
+.fb_title_name{
+  margin: 0;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center !important;
+  font-family: 'Gloria Hallelujah', cursive;
+  
+}
+.login-input{
+  padding: 5px;
+  margin-left: 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* For mobile phones */
+@media only screen and (max-width: 768px) {
+  .navbar{
+     
+      padding: 5px;
   }
 }
