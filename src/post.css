@@ -1,0 +1,65 @@
+div.header, div.footer {
+    display: flex;
+    flex-direction: row;
+  }
+  div.header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  div.header .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  div.header .follow-btn {
+    display: flex;
+    align-items :center;
+    margin: 0 0 0 auto;
+  }
+  div.header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  div.header h3, div.header h4 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Cairo', sans-serif !important;
+
+  }
+  .inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  div.footer .stats {
+    display: flex;
+    font-size: 15px;
+    
+  }
+  div.footer .stats strong {
+    font-size: 18px;
+    
+  }
+  div.footer .stats .likes {
+    margin: 4px;
+    
+  }
+  div.footer .stats .shares {
+    margin: 4px;
+    
+  }
+  div.footer .cta {
+    margin-left: auto;
+  }
+  div.footer .cta button {
+    border: 0;
+    background: transparent;
+  }

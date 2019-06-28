@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import './post.css';
 import Navbar from "./components/firstPage/Navbar";
 import { connect } from "react-redux";
 import Dashboard from "./components/home/Dashboard";

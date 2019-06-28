@@ -22,7 +22,7 @@ class Navbar extends Component {
           </Hidden>
 
           <Grid item xs={12} md={6} style={{display :"flex",justifyContent : "center",alignItems: "center"}}>
-            <input type="text" placeholder="ابحث"  />
+            <input type="text" placeholder="ابحث"  dir="rtl" />
             <Button style={{color :  "white"}}>ابحث</Button>
             <Button  style={{color :  "white"}}>اكتب مقالة</Button>
             <Button  style={{color :  "white"}} onClick={this.props.signOut}>Logout</Button>
