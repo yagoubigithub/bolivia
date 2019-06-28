@@ -7,7 +7,7 @@ import Dashboard from "./components/home/Dashboard";
 class App extends Component {
   render() {
     const { auth } = this.props;
-    return <div>{auth.uid !== undefined ? <Dashboard /> : <Navbar />}</div>;
+    return <div>{auth.uid !== undefined ? <div><Dashboard /></div> : <Navbar />}</div>;
   }
 }
 

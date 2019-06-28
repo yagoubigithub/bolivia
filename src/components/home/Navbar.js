@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signOut } from "../../store/actions/authAction";
 import { Grid, Hidden, Button } from "@material-ui/core";
+import {Link} from 'react-router-dom';
 class Navbar extends Component {
   state = {};
   render() {
@@ -10,22 +11,22 @@ class Navbar extends Component {
         <Grid container>
           <Hidden mdDown>
             <Grid item md={6}>
-              <h1 className="fb_title_name">Bolivia</h1>
+             <Link className="nav-link" to="/"><h1 className="fb_title_name">Bolivia</h1></Link> 
             </Grid>
           </Hidden>
           <Hidden mdUp>
             <Grid item xs={12} >
-              <h1 className="fb_title_name" style={{ textAlign: "center" }} >
+            <Link className="nav-link" to="/"><h1 className="fb_title_name" style={{ textAlign: "center" }} >
                 Bolivia
-              </h1>
+              </h1></Link>
             </Grid>
           </Hidden>
 
           <Grid item xs={12} md={6} style={{display :"flex",justifyContent : "center",alignItems: "center"}}>
-            <input type="text" placeholder="ابحث"  dir="rtl" />
-            <Button style={{color :  "white"}}>ابحث</Button>
-            <Button  style={{color :  "white"}}>اكتب مقالة</Button>
-            <Button  style={{color :  "white"}} onClick={this.props.signOut}>Logout</Button>
+            <input type="text" placeholder="ابحث"  dir="rtl" style={{padding : 6}} />
+            <Button variant="outlined" style={{color :  "white",marginRight : 4}}>ابحث</Button>
+           <Button><Link className="nav-link" to="/create-article" >اكتب مقالة</Link></Button>
+            <Button  onClick={this.props.signOut}> <Link className="nav-link" to="/create-article" >خروج</Link></Button>
           </Grid>
         </Grid>
       </nav>

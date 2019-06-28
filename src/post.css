@@ -2,6 +2,9 @@ div.header, div.footer {
     display: flex;
     flex-direction: row;
   }
+  div.footer{
+    background: #E2E2E2;
+  }
   div.header .profile-thumbnail {
     width: 50px;
     height: 50px;

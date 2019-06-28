@@ -36,6 +36,11 @@ body{
   width: 100%;
   box-sizing: border-box;
 }
+.nav-link{
+  color : white;
+  font-family: 'Cairo', sans-serif !important;
+  text-decoration: none;
+}
 
 /* For mobile phones */
 @media only screen and (max-width: 768px) {
