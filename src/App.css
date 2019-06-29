@@ -41,7 +41,11 @@ body{
   font-family: 'Cairo', sans-serif !important;
   text-decoration: none;
 }
-
+.create-article-label{
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 22px;
+  margin-top : 15px !important;
+}
 /* For mobile phones */
 @media only screen and (max-width: 768px) {
   .navbar{
