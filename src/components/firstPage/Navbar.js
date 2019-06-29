@@ -6,13 +6,13 @@ export default function Navbar() {
         <nav className="navbar">
         <Grid container>
          
-            <Grid item md={6} xs={12}>
+            <Grid item sm={3} xs={12}>
               <h1 className="fb_title_name">Bolivia</h1>
             </Grid>
         
          
 
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={9}>
            <SignIn /> 
 
           </Grid>

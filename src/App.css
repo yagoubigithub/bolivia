@@ -17,8 +17,8 @@ body{
   background: var(--floor);
 }
 .navbar{
-  background-color: var(--primary);
-  padding: 15px;
+  background-color: var(--primary-dark);
+ padding-top: 10px; 
 }
 .fb_title_name{
   padding: 0 !important;
@@ -46,10 +46,30 @@ body{
   font-size: 22px;
   margin-top : 15px !important;
 }
+.description{
+  font-family: 'Lalezar', cursive;
+font-size: 50px;
+color:white;
+
+margin: 0;
+padding: 0;
+padding-top: 20px; 
+
+}
+.sign-up-btn{
+  background-color: var(--secondary-dark) !important;
+  color: white !important;
+  font-size: 20px !important;
+  font-family: 'Cairo', sans-serif !important;
+  width : 200px;
+}
 /* For mobile phones */
 @media only screen and (max-width: 768px) {
   .navbar{
      
       padding: 5px;
+  }
+  .description{
+    font-size: 35px;
   }
 }

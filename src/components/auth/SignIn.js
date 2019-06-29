@@ -42,7 +42,7 @@ class SignIn extends Component {
                 size="small"
                 variant="contained"
               >
-                Connexion
+                تسجيل الدخول
               </Button>
             </Grid>
           </Grid>
