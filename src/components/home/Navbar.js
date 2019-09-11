@@ -26,7 +26,7 @@ class Navbar extends Component {
             <input type="text" placeholder="ابحث"  dir="rtl" style={{padding : 6}} />
             <Button variant="outlined" style={{color :  "white",marginRight : 4}}>ابحث</Button>
            <Button><Link className="nav-link" to="/create-article" >اكتب مقالة</Link></Button>
-            <Button  onClick={this.props.signOut}> <Link className="nav-link" to="/create-article" >خروج</Link></Button>
+            <Button  onClick={this.props.signOut}> <Link className="nav-link" to="/" >خروج</Link></Button>
           </Grid>
         </Grid>
       </nav>

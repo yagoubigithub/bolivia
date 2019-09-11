@@ -52,7 +52,7 @@ class SignIn extends Component {
     }
 }
 const mapStateToProps = state => {
-  console.log(state);
+ 
   return {
     authErr: state.auth.authErr
   };

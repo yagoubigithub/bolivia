@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Hidden } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import SignIn from '../auth/SignIn';
 export default function Navbar() {
     return (
