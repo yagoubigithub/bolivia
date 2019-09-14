@@ -46,7 +46,7 @@ export default class createArticle extends Component {
         [{ align: [] }],
 
         ["clean"],
-        ["image", "video", "link"],
+        [/*"image", "video",*/ "link"],
         [{ direction: "rtl" }]
       ]
     };
@@ -71,8 +71,8 @@ export default class createArticle extends Component {
       "clean",
       "direction",
       "link",
-      "image",
-      "video"
+      //"image",
+      //"video"
     ];
     const { selectedOption } = this.state;
     return (

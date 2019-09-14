@@ -5,7 +5,9 @@ import { connect } from "react-redux";
 class SignIn extends Component {
     state = {  }
 
-    handelClick = () => {
+    handelClick = (e) => {
+
+      e.preventDefault();
       const email = this.email.value;
       const password = this.password.value;
      // this.props.deleteAuthErr();
@@ -18,7 +20,7 @@ class SignIn extends Component {
         return (
         <React.Fragment>    
         
-        <form>
+        <form onSubmit={this.handelClick} >
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
               <input
@@ -38,7 +40,7 @@ class SignIn extends Component {
             </Grid>
             <Grid item xs={12} md={4}>
               <Button
-                onClick={this.handelClick}
+                type="submit"
                 size="small"
                 variant="contained"
               >
