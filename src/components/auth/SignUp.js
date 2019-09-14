@@ -12,19 +12,47 @@ import  UploadImages  from  'yagoubi-upload-images'
   handelClick = (e) =>{
 
     e.preventDefault();
-    this.props.signUp("email","password","url");
-  }
-  onChangeImage = (images) =>{
- 
-    this.setState({image : images[0]})
-     
+    const email = this.email.value;
+    const password = this.password.value;
+    const firstname = this.firstname.value;
+    const lastname = this.lastname.value;
+  
+    const newUser = {
+      email : email,
+      password : password,
+      firstname  : firstname,
+      lastname : lastname
+
     }
+    this.props.signUp(newUser);
+  }
+  
     render() {
         const { authErr } = this.props;
         return (
             <Card style={{padding : 10}}>
                 <form onSubmit={this.handelClick} >
           <Grid container spacing={2}>
+          <Grid item xs={12} >
+              <input
+                ref={input => (this.firstname = input)}
+                className="login-input"
+                type="text"
+                name="firstname"
+                defaultValue=""
+                placeholder="Firstname*"
+              />
+            </Grid>
+            <Grid item xs={12} >
+              <input
+                ref={input => (this.lastname = input)}
+                className="login-input"
+                type="text"
+                name="lastname"
+                defaultValue=""
+                placeholder="Lastname*"
+              />
+            </Grid>
             <Grid item xs={12} >
               <input
                 ref={input => (this.email = input)}
@@ -55,13 +83,7 @@ import  UploadImages  from  'yagoubi-upload-images'
                 placeholder="Confirm Password*"
               />
             </Grid>
-            <Grid item xs={12} >
-            <UploadImages onChange={this.onChangeImage} placeholder="Add profile Image" />
-              {/*
-              
-              
-              */}
-            </Grid>
+           
             <Grid item xs={12} >
               <Button
                 type="submit"

@@ -7,9 +7,10 @@ export const signIn = (email, password) => {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => {
+      .then((user) => {
         //
-        dispatch(getUserData())
+        
+        dispatch(getUserData(user.uid))
         dispatch({ type: "LOGIN_SUCCESS" });
       })
       .catch(err => {
@@ -29,13 +30,15 @@ export const signUp = (newUser) => {
         newUser.email, 
         newUser.password
       ).then(resp => {
-          console.log(resp);
+         
         return firestore.collection('users').doc(resp.user.uid).set({
           firstname: newUser.firstname,
           lastname: newUser.lastname,
           initials: newUser.firstname[0] + newUser.lastname[0]
         });
-      }).then(() => {
+      }).then((user) => {
+     
+        dispatch(getUserData(user.user.uid))
         dispatch({ type: 'SIGNUP_SUCCESS' });
       }).catch((err) => {
         dispatch({ type: 'SIGNUP_ERROR', err});
@@ -57,8 +60,9 @@ export const signOut = () => {
     };
   };
   
-  export const getUserData = () => dispatch => {
+  export const getUserData = (id) => dispatch => {
     dispatch({ type: "LOADING_USER" });
+    console.log(id)
   /*
     axios
       .get("/user")
