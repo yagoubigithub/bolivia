@@ -15,7 +15,10 @@ const authReducer = (state = initStat, action) => {
         loading : false
       };
     case "SIGNOUT_SUCCESS":
-      return state;
+      return {
+        ...state,
+        authErr : ""
+      };
     case "LOADING_USER"  :
       return {
       ...state,

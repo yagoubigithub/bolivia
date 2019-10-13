@@ -32,6 +32,9 @@ class Navbar extends Component {
     );
   }
 }
+const mapStateToProps = state =>({
+  
+})
 const mapDipatchToProps = dispatch => {
   return {
     signOut: () => dispatch(signOut())

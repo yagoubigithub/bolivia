@@ -2,6 +2,7 @@ export const signIn = (email, password) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
    
     const firebase = getFirebase();
+    
 
     dispatch({type : "LOADING_USER"})
     firebase
@@ -10,7 +11,7 @@ export const signIn = (email, password) => {
       .then((user) => {
         //
         
-        dispatch(getUserData(user.uid))
+        dispatch(getUserData(user.uid,getFirestore()))
         dispatch({ type: "LOGIN_SUCCESS" });
       })
       .catch(err => {
@@ -38,7 +39,7 @@ export const signUp = (newUser) => {
         });
       }).then((user) => {
      
-        dispatch(getUserData(user.user.uid))
+        dispatch(getUserData(user.user.uid,firestore))
         dispatch({ type: 'SIGNUP_SUCCESS' });
       }).catch((err) => {
         dispatch({ type: 'SIGNUP_ERROR', err});
@@ -60,17 +61,25 @@ export const signOut = () => {
     };
   };
   
-  export const getUserData = (id) => dispatch => {
+  export const getUserData = (id,firestore) => dispatch => {
     dispatch({ type: "LOADING_USER" });
     console.log(id)
-  /*
-    axios
-      .get("/user")
-      .then(res => {
-        dispatch({
-          type: SET_USER,
-          payload: res.data
-        });
+
+    firestore.collection('users').doc(id).get()
+    .then(doc=>{
+      
+      console.log(doc)
+      dispatch({
+        type: "SET_USER",
+        payload: "res.data"
+      });
+    }).catch(error=>{
+      dispatch({
+        
+        
+        type : "SET_USER_ERROR",
+        payload : error
       })
-      .catch(err => console.log(err));*/
+    })
+  
   };
